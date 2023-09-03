@@ -146,11 +146,11 @@ class _LightBedState extends State<LightBed> with WidgetsBindingObserver {
               style: TextStyle(fontSize: 12),
             ),
             Text(
-              'Elapsed Unit: ${calculateElapsedUnit(elapsedDuration, wattOfLight / 1000)}',
+              'Elapsed Unit: ${calculateElapsedUnit(elapsedDuration, wattOfLight / 1000).toStringAsFixed(8)}',
               style: TextStyle(fontSize: 12),
             ),
             Text(
-              'Elapsed Taka: ${calculateElapsedTaka(elapsedDuration, wattOfLight / 1000)}',
+              'Elapsed Taka: ${calculateElapsedTaka(elapsedDuration, wattOfLight / 1000).toStringAsFixed(8)}',
               style: TextStyle(fontSize: 12),
             ),
             Container(

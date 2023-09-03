@@ -88,9 +88,15 @@ class _TopCardState extends State<TopCard> {
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    'Energy Usage',
-                    style: TextStyle(fontWeight: FontWeight.w500, fontSize: 14),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Energy Usage',
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500, fontSize: 14),
+                      ),
+                    ],
                   ),
                   Row(
                     children: [
@@ -205,7 +211,7 @@ class _TopCardState extends State<TopCard> {
                     children: [
                       Icon(Icons.calendar_month_outlined),
                       Text(
-                        '16 Aug, 2023',
+                        '5 Sept, 2023',
                         style: TextStyle(fontWeight: FontWeight.w500),
                       ),
                     ],

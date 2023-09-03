@@ -186,11 +186,11 @@ class _LightLivState extends State<LightLiv> with WidgetsBindingObserver {
                 style: TextStyle(fontSize: 12),
               ),
               Text(
-                'Elapsed Unit: ${calculateElapsedUnit(elapsedDuration, voltage! * current! * 0.89 / 1000)}',
+                'Elapsed Unit: ${calculateElapsedUnit(elapsedDuration, voltage! * current! * 0.89 / 1000).toStringAsFixed(8)}',
                 style: TextStyle(fontSize: 12),
               ),
               Text(
-                'Elapsed Taka: ${calculateElapsedTaka(elapsedDuration, voltage! * current! * 0.89 / 1000)}',
+                'Elapsed Taka: ${calculateElapsedTaka(elapsedDuration, voltage! * current! * 0.89 / 1000).toStringAsFixed(8)}',
                 style: TextStyle(fontSize: 12),
               ),
               SizedBox(

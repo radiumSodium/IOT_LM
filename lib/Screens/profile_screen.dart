@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:project_neal/constant.dart';
+import 'package:project_neal/etc/Policy.dart';
+import 'package:project_neal/etc/Privacy.dart';
+import 'package:project_neal/etc/Security.dart';
+import 'package:project_neal/etc/Settings.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -64,6 +69,39 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
+  void _showLogoutConfirmationDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Logout Confirmation'),
+          content: Text('Are you sure you want to log out?'),
+          actions: <Widget>[
+            TextButton(
+              child: Text(
+                'Cancel',
+                style: TextStyle(color: kButtonDarkBlue),
+              ),
+              onPressed: () {
+                Navigator.of(context).pop(); // Close the dialog
+              },
+            ),
+            TextButton(
+              child: Text(
+                'Logout',
+                style: TextStyle(color: kButtonDarkBlue),
+              ),
+              onPressed: () {
+                // Add logout logic here
+                Navigator.of(context).pop(); // Close the dialog
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -100,25 +138,70 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             Column(
               children: [
-                Tile(
-                  name: 'Privacy',
-                  icon: Icon(Icons.privacy_tip_outlined),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Privacy(),
+                      ),
+                    );
+                  },
+                  child: Tile(
+                    name: 'Privacy',
+                    icon: Icon(Icons.privacy_tip_outlined),
+                  ),
                 ),
-                Tile(
-                  name: 'Policy',
-                  icon: Icon(Icons.policy),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Policy(),
+                      ),
+                    );
+                  },
+                  child: Tile(
+                    name: 'Policy',
+                    icon: Icon(Icons.policy),
+                  ),
                 ),
-                Tile(
-                  name: 'Settings',
-                  icon: Icon(Icons.settings),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Settings(),
+                      ),
+                    );
+                  },
+                  child: Tile(
+                    name: 'Settings',
+                    icon: Icon(Icons.settings),
+                  ),
                 ),
-                Tile(
-                  name: 'Security',
-                  icon: Icon(Icons.security),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Security(),
+                      ),
+                    );
+                  },
+                  child: Tile(
+                    name: 'Security',
+                    icon: Icon(Icons.security),
+                  ),
                 ),
-                Tile(
-                  name: 'Logout',
-                  icon: Icon(Icons.logout),
+                GestureDetector(
+                  onTap: () {
+                    _showLogoutConfirmationDialog(context);
+                  },
+                  child: Tile(
+                    name: 'Logout',
+                    icon: Icon(Icons.logout),
+                  ),
                 ),
               ],
             ),

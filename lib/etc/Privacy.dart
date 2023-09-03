@@ -1,19 +1,20 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project_neal/constant.dart';
 
-class Add extends StatefulWidget {
-  const Add({super.key});
+class Privacy extends StatefulWidget {
+  const Privacy({super.key});
 
   @override
-  State<Add> createState() => _AddState();
+  State<Privacy> createState() => _PrivacyState();
 }
 
-class _AddState extends State<Add> {
+class _PrivacyState extends State<Privacy> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add new data'),
+        title: Text('Privacy'),
         backgroundColor: kButtonDarkBlue,
       ),
       body: Center(

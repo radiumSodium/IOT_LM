@@ -1,19 +1,20 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project_neal/constant.dart';
 
-class Add extends StatefulWidget {
-  const Add({super.key});
+class Settings extends StatefulWidget {
+  const Settings({super.key});
 
   @override
-  State<Add> createState() => _AddState();
+  State<Settings> createState() => _SettingsState();
 }
 
-class _AddState extends State<Add> {
+class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add new data'),
+        title: Text('Settings'),
         backgroundColor: kButtonDarkBlue,
       ),
       body: Center(
