@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_neal/widgets/ElementCard/RelayButton.dart';
 import 'package:project_neal/widgets/middle_tabs.dart';
 import 'package:project_neal/widgets/top_card.dart';
 import 'package:project_neal/widgets/top_header.dart';
@@ -20,7 +21,7 @@ class _SmartScreenState extends State<SmartScreen> {
         children: [
           TopHeader(),
           TopCard(),
-          MiddleTabs(),
+          RelayButton(),
         ],
       )),
     );

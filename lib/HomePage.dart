@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 GButton(
                   icon: Icons.wb_sunny_outlined,
-                  text: 'Smart',
+                  text: 'Relay',
                 ),
                 GButton(
                   icon: Icons.person_outlined,
